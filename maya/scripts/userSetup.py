@@ -36,7 +36,6 @@ def bootstrap_strack():
     entity_info = strack_info.get("entity_info")
     pm.evalDeferred("StrackMenu(%s, %s)" % (project_info, entity_info))
 
-
 log.info("STD_Maya initializing...")
 bootstrap_strack()
 log.info("STD_Maya initialized...")

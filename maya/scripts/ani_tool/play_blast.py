@@ -19,8 +19,12 @@ def main():
 
     media_temp_file = filename
 
-    pm.mel.eval(
-        'playblast  -format qt -filename "%s" -forceOverwrite  -sequenceTime 0 -clearCache 1 -viewer 1 -showOrnaments 1 -offScreen  -fp 4 -percent 50 -compression "H.264" -quality 100 -widthHeight %s %s;' % (
-        media_temp_file, width, height))
+    pm.playblast(format="qt", filename=media_temp_file, forceOverwrite=True, sequenceTime=0, clearCache=1, viewer=1,
+                 showOrnaments=1, offScreen=True, fp=4, percent=50, compression="H.264", quality=100,
+                 widthHeight=(width, height))
+    #
+    # pm.mel.eval(
+    #     'playblast  -format qt -filename "%s" -forceOverwrite  -sequenceTime 0 -clearCache 1 -viewer 1 -showOrnaments 1 -offScreen  -fp 4 -percent 50 -compression "H.264" -quality 100 -widthHeight %s %s;' % (
+    #     media_temp_file, width, height))
 
 

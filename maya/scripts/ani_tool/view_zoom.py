@@ -35,6 +35,7 @@ class win(QDialog):
         cmds.panZoom( sel_camera,abs=True, z=1,d=0,l=0,r=0,u=0 )
     def pan(self):
         pass
+
 so=win()
 so.show()
 

@@ -170,8 +170,6 @@ class LightWidget(QtWidgets.QWidget):
         #
         # layout.addWidget(intensity, 1, 0, 1, 2)
 
-
-
         # Now this is a weird Qt thing where we tell it the kind of sizing we want it respect
         # We are saying that the widget should never be larger than the maximum space it needs
         self.setSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Maximum)
@@ -222,8 +220,6 @@ class LightWidget(QtWidgets.QWidget):
     def keyFrame(self, attr, *args):
         currentTime = pm.currentTime(query=True)
         pm.setKeyframe(attr, time=currentTime,breakdown=False)
-
-
 
         # def setColor(self):
         #     lightColor = self.light.color.get()
@@ -293,7 +289,7 @@ class LightingManager(QtWidgets.QWidget):
         self.refresh()
 
     def buildUI(self):
-        # Like in the LightWidget we show our
+        # Like in the LightWidget we show out
         layout = QtWidgets.QGridLayout(self)
 
         self.lightTypeCB = QtWidgets.QComboBox()
